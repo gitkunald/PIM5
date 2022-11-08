@@ -1,4 +1,4 @@
-package com.mit.poc;
+package automation;
 
 
 import com.ibm.pim.catalog.Catalog;
