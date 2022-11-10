@@ -23,10 +23,12 @@ public void reportGenerate(ReportGenerateFunctionArguments arg0) {
 	CatalogManager ctgMgr = ctx.getCatalogManager();
 	Catalog ctg = ctgMgr.getCatalog("Automation_poc_Catalog");
 	
-	Logger logger = ctx.getLogger("ipm.log ************** for tesing");
+	Logger logger = ctx.getLogger("ipm.log");
+	logger.logInfo("Automation Testing ********");
 	PIMCollection<Item> allItems=ctg.getItems();
 	for(Item oitem: allItems)
 	{
+		logger.logInfo("Testing for item " +oitem.getPrimaryKey());
 		System.out.println(oitem.getPrimaryKey());
 		logger.logInfo(oitem.getPrimaryKey());
 		System.out.println(oitem.getAttributeValue("Automation_poc/Automation_Attrib_Desc"));	
@@ -42,9 +44,11 @@ public void scriptingSandbox(ScriptingSandboxFunctionArguments arg0) {
 	CatalogManager ctgMgr = ctx.getCatalogManager();
 	Catalog ctg = ctgMgr.getCatalog("Automation_poc_Catalog");
 	Logger logger = ctx.getLogger("ipm.log");
+	logger.logInfo("Automation Testing ******** Jenkins ****** ");	
 	PIMCollection<Item> allItems=ctg.getItems();
 	for(Item oitem: allItems)
 	{
+		logger.logInfo("Testing for item " +oitem.getPrimaryKey());
 		System.out.println(oitem.getPrimaryKey());
 		logger.logInfo(oitem.getPrimaryKey());
 		System.out.println(oitem.getAttributeValue("Automation_poc/Automation_Attrib_Desc"));	
