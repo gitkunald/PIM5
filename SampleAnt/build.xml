@@ -7,7 +7,8 @@
 	</target> -->
 	
 	<property name="src.dir" location="src" />
-  	<property name="build.dir" location="staging" />
+  	<property name="build.dir" location="lib" />
+   <property name="stage.dir" location="staging" />
 	
 	<path id="classpath">
 		<fileset dir="lib">
@@ -24,13 +25,13 @@
   	</target>
 	
 	<target name="copy">
-		<copy todir="C:\Users\DKunal\Documents\GitHub\PIM5\SampleAnt\lib" overwrite="true">
-			<fileset dir="C:\MDM CE\PIM jars" includes="**/*.jar" />
+		<copy todir="/home/appadmin/builds/workspace/workspace/AntPipeline/SampleAnt/lib" overwrite="true">
+		<fileset dir="/home/appadmin/builds/workspace/workspace/AntPipeline/SampleAnt/PIMjars" includes="**/*.jar" />
 		</copy>
 	</target>
 	
 	<target name="compile" depends="clean,makedir,copy">
-		<javac classpathref="classpath" includeantruntime="false" srcdir="${src.dir}" destdir="${build.dir}" />	
-		<jar destfile="newbuild.jar" basedir="${build.dir}" />		
+		<javac classpathref="classpath" includeantruntime="false" srcdir="${src.dir}" destdir="${stage.dir}" />	
+		<jar destfile="newbuild.jar" basedir="${stage.dir}" />		
 	</target>
 </project>
