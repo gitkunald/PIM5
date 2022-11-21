@@ -44,7 +44,9 @@ public void scriptingSandbox(ScriptingSandboxFunctionArguments arg0) {
 	CatalogManager ctgMgr = ctx.getCatalogManager();
 	Catalog ctg = ctgMgr.getCatalog("Automation_poc_Catalog");
 	Logger logger = ctx.getLogger("ipm.log");
-	logger.logInfo("Automation Testing ******** Jenkins ****** ");	
+	logger.logInfo("Automation Testing ******** Jenkins ****** ");
+	logger.logInfo("Automation Testing ******** Ant build 21-11-2022 ****** ");
+	
 	PIMCollection<Item> allItems=ctg.getItems();
 	for(Item oitem: allItems)
 	{
