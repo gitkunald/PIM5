@@ -20,7 +20,7 @@ public class PIMBoxDemo implements ScriptingSandboxFunction {
 		CatalogManager ctgMgr = ctx.getCatalogManager();
 		Catalog ctg = ctgMgr.getCatalog("Automation_poc_Catalog");
 		Logger logger = ctx.getLogger("ipm.log");
-		logger.logInfo("Automation Testing Jenkins ****** ");
+		logger.logInfo("WELCOME TO AUTOMATION DEPLOYMENT ");
 		logger.logInfo("Demo Testing Ant build on 21-11-2022 ****** ");
 		
 		PIMCollection<Item> allItems=ctg.getItems();
