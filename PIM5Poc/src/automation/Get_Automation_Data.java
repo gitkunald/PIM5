@@ -45,7 +45,7 @@ public void scriptingSandbox(ScriptingSandboxFunctionArguments arg0) {
 	Catalog ctg = ctgMgr.getCatalog("Automation_poc_Catalog");
 	Logger logger = ctx.getLogger("ipm.log");
 	logger.logInfo("WELCOME TO AUTOMATION DEPLOYMENT");
-	logger.logInfo("Automation Testing ******** Ant build 21-11-2022 ****** ");
+	logger.logInfo("Automation Testing ******** Ant build 23-11-2022 : 11:38 ****** ");
 	
 	PIMCollection<Item> allItems=ctg.getItems();
 	for(Item oitem: allItems)
